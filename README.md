@@ -18,3 +18,12 @@ Output: "Jasmine%20Ann%20Jones"
 Clarifying questions:
 * can we assume the input will always be a string?
 * can we assume there will always be only one space between each word?
+
+function convertToURL (string) {
+  let wordArray = string.split(" ");
+  let outputString = wordArray[0];
+  for (let i = 1; i < wordArray.length; i++) {
+    outputString += "%20" + wordArray[i];
+  }
+  return outputString;
+}
