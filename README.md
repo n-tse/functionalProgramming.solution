@@ -68,10 +68,26 @@ Output: "3ab2c4da"
 
 function compress(string) {
   let outputString = "";
+  let l = 0;
+  while (l < string.length) {
+    let r = l;
+    while (r+1 < string.length && string[r+1] == string[l]) {
+      r++;
+    }
+    let num = r-l+1;
+    if (num > 1) outputString += num;
+    outputString += string[l];
+  }
+  return outputString;
+}
+
+
+function compress(string) {
+  let outputString = "";
   let currentLetter = string[0];
   let count = 1;
-  for (let i = 1; i < string.length; i++) {
-    if (string[i] === currentLetter) {
+  for (let i = 1; i <= string.length; i++) {
+    if (i < string.length && string[i] === currentLetter) {
     	count++;
     } else if (count !== 1) {
     	outputString += count + currentLetter;
@@ -82,11 +98,11 @@ function compress(string) {
       currentLetter = string[i];
     }
   }
-  if (count === 1) {
+  <!-- if (count === 1) {
   	outputString += currentLetter;
   } else {
   	outputString += count + currentLetter;
-  }
+  } -->
   console.log(outputString);
 }
 
