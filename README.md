@@ -58,4 +58,27 @@ Input: "aaabccdddda"
 
 Output: "3ab2c4da"
 
+function compress(string) {
+  let outputString = "";
+  let currentLetter = string[0];
+  let count = 1;
+  for (let i = 1; i < string.length; i++) {
+    if (string[i] === currentLetter) {
+    	count++;
+    } else if (count !== 1) {
+    	outputString += count + currentLetter;
+      currentLetter = string[i];
+      count = 1;
+    } else {
+    	outputString += currentLetter;
+      currentLetter = string[i];
+    }
+  }
+  if (count === 1) {
+  	outputString += currentLetter;
+  } else {
+  	outputString += count + currentLetter;
+  }
+  console.log(outputString);
+}
 
