@@ -102,3 +102,11 @@ Output: false
 Input: "copyright"
 
 Output: true
+
+function isUnique(string) {
+	let letterSet = new Set();
+	for (let i = 0; i < string.length; i++) {
+  	letterSet.add(string[i]);
+  }
+  console.log(letterSet.size === string.length);
+}
