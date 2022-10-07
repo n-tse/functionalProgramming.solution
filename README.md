@@ -27,3 +27,15 @@ function convertToURL (string) {
   }
   return outputString;
 }
+
+function convertToURL (string) {
+  let outputString = "";
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] === " ") {
+      outputString += "%20";
+    } else {
+      outputString += string[i];
+    }
+  }
+  return outputString;
+}
