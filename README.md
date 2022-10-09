@@ -164,6 +164,10 @@ Input: [9, 2, 7, 12]
 
 Output: [2, 7, 9, 12]
 
+Clarifying questions
+* would it be okay to write a solution in O(n^2) time complexity?
+* will the array be comprised of numbers only?
+
 function sort(array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = i + 1; j < array.length; j++) {
