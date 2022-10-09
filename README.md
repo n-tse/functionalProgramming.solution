@@ -93,6 +93,7 @@ function compress(string) {
     let num = r-l+1;
     if (num > 1) outputString += num;
     outputString += string[l];
+    l = r + 1;
   }
   return outputString;
 }
