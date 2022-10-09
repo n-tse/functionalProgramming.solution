@@ -136,6 +136,9 @@ Input: "copyright"
 
 Output: true
 
+Clarifying questions
+* will an empty string count as unique?
+
 function isUnique(string) {
 	let letterSet = new Set();
 	for (let i = 0; i < string.length; i++) {
