@@ -51,6 +51,10 @@ Input: [7, 9, "hi", 12, "hi", 7, 53]
 
 Output: [7, 9, "hi", 12, 53]
 
+Clarifying questions:
+* can we assume the input array will always have at least one element?
+* are the number 10 and the string "10" considered to be the same?
+
 function deDupe(array) {
 	let set = new Set();
   for (let i = 0; i < array.length; i++) {
