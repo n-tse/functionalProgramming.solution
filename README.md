@@ -63,6 +63,13 @@ function deDupe(array) {
   console.log(Array.from(set));
 }
 
+// solution using filter
+function deDupe(array) {
+  return array.filter((item, index) => array.indexOf(item) === index);
+}
+
+console.log(deDupe(array));
+
 ## Question 3: Compressing Strings
 
 Write an algorithm that takes a string with repeated characters and compresses them, using a number to show how many times the repeated character has been compressed. For instance, aaa would be written as 3a. Solve the problem with and without recursion.
