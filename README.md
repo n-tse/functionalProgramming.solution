@@ -18,6 +18,7 @@ Output: "Jasmine%20Ann%20Jones"
 Clarifying questions:
 * can we assume the input will always be a string?
 * can we assume there will always be only one space between each word?
+* will the input ever be empty?
 
 function convertToURL (string) {
   let wordArray = string.split(" ");
@@ -28,6 +29,7 @@ function convertToURL (string) {
   return outputString;
 }
 
+// solution that accounts for all cases
 function convertToURL (string) {
   let outputString = "";
   for (let i = 0; i < string.length; i++) {
